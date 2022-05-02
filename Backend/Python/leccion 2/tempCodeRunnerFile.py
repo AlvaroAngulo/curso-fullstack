@@ -1,0 +1,1 @@
+   print(f"Los numeros son iguales: {numero1} , {numero2}")

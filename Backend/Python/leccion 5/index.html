@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <b><p>Today is <u><label id='today'></label></u></p></b>
+
+    <py-env>
+        - paths:
+            - data.py
+    </py-env>
+
+
+    <py-script>
+import datetime as dt
+from data import tuple_excersice
+pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
+
+class Persona:
+        def __init__(self, nombre, apellido):
+            self.nombre = nombre
+            self.apellido = apellido
+        
+        def __str__(self):
+            return f"{self.nombre} {self.apellido}"
+
+persona1 = Persona("Elkin", "Angulo")
+print(persona1)
+print(tuple_excersice())
+    </py-script>
+</body>
+
+</html>
